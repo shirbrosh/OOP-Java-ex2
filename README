@@ -1,0 +1,43 @@
+shir_brosh
+316124767
+
+
+=============================
+=      File description     =
+=============================
+this exercise contains the following java classes:
+SpaceShipFactory- This class acts as the driver to create all spaceship objects.
+SpaceShip - The spaceship object that is used in the SpaceWars game.
+HumaneShip- The human spaceship object that is used in the SpaceWars game.
+RunnerShip- The Runner spaceship object that is used in the SpaceWars game.
+BasherShip- The busher spaceship object that is used in the SpaceWars game.
+AggrShip - The Aggressive spaceship object that is used in the SpaceWars game.
+DrunkShip- The drunkard spaceship object that is used in the SpaceWars game.
+SpecialShip- The special spaceship object that is used in the SpaceWars game.
+
+=============================
+=          Design           =
+=============================
+I chose to use inheritance- SpaceShip is the base class and all other spaceship types (human, runner, basher,
+aggressive, drunkard and special) inherit from her. I used the given API in the SpaceShip class and added one
+function (further description in the Implementation details section).
+
+=============================
+=  Implementation details   =
+=============================
+I added to the SpaceShip class the function upDateEnergy which checks if the energy doesn't go bellow zero,
+and updates it after a hit (either getting shot or colliding), it helps to prevent code duplicate.
+The ships class contains the doAction function, that inherit its action from SpaceShip and adds different
+behavior for each spaceship according to the game rolls.
+The HumanShip also contains an override for the getImage function to receive a different spaceship icon.
+
+=============================
+=    Answers to questions   =
+=============================
+DrunkardShip- in my drunkard ship i changed the ship's icon to a corona beer using a createImageIcon function,
+    this is a drunkard ship, so it has a hard time driving, it only does circles because its always
+    accelerating and turning to the right.
+SpecialShip- my special ship is an alien (also changed the icon using a createImageIcon function),
+    the alien is scared of people, so when he feels no danger hes always accelerating straight, but when a
+    spaceship comes closer then a 0.30 units he gets scared and crazy and starts accelerating to the left and
+    shooting everywhere.
